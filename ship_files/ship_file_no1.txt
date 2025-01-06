@@ -1,0 +1,3 @@
+corevette:3:A1,B1,C1
+frigate:2:B3,B4
+cruiser:1:D4

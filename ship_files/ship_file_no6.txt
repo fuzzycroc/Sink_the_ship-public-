@@ -1,0 +1,3 @@
+destroyer:3:B1,B2,B3
+patrol:2:C4,C5
+submarine:2:D1,D2

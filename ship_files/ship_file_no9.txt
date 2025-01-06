@@ -1,0 +1,3 @@
+patrol:2:E1,E2
+corvette:3:B2,C2,D2
+cruiser:1:A3
