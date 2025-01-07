@@ -110,8 +110,6 @@ while main_game == True:
                     
             elif user_menu == 3: #done
 
-                #make sure the map is combined before you end!!
-            
                 while True:
                     user_input = str(input("Do you want to see the enemy map? (Y/N):  "))
                     try:

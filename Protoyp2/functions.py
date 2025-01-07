@@ -43,7 +43,7 @@ def translate_coordinates(raw_coordinates):#done
     and translates it to matrix format, such as [1, 1], for the game board.'''
 
     try:
-        row_coordinate = raw_coordinates[0].upper()  # ensure the row letter is uppercase very usefull
+        row_coordinate = raw_coordinates[0].upper()  # ensure the row letter is uppercase 
         column_coordinate = int(raw_coordinates[1:])  # convert column part to integer
 
         row_dict = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5}  # dictionary mapping letters to row numbers
@@ -145,7 +145,7 @@ def format_board (game_board): #done
             formated_block = f"| {block} "
             formated_row.append(formated_block)
 
-        formated_row_string = ''.join(formated_row) + "|" #this avoids the double line problem!!
+        formated_row_string = ''.join(formated_row) + "|" 
         print(formated_row_string)
             
     print(divider)
@@ -173,8 +173,7 @@ def read_cheat_file(): #done
     #split all info using .split(':')
 
     final_fleet = []
-    for ship in fleet_info: #splits into list in list with parts this works!!
-        parts = ship.split(':')
+    for ship in fleet_info: #splits into list in list with parts 
 
         final_fleet.append(parts)
     
@@ -197,7 +196,7 @@ def main_menu_choices (): #done
     '''this function is the main menu that is displayed to the user 
         which returns only the option chosen '''
 
-    while True: #checks for value error here
+    while True: #checks for errors here 
         try:
             print("Enter number to choose an option")
             print("1. Shoot Enemy Ship")
@@ -205,12 +204,14 @@ def main_menu_choices (): #done
             print("3. End Game ")
 
             user_input = int(input("Enter your choice (1-3): "))
-            break 
+            if user_input in range (1, 4):
+                break
+            else: 
+                print("\n Please enter value from 1 to 3") 
         except ValueError:
-            print
-            print("\nplease enter a value from 1 to 3")
-        #add in Except value error checks here!! 
-
+         
+            print("\n Please enter a valid number")
+       
 
     return user_input
 
@@ -285,8 +286,7 @@ def block_percentage_left(status, part, whole): #done
     '''this function calculates the precentage of blocks left
         and returns whether or not the missile has hit or missed '''
 
-    #lesson learnt: it is possible to return several values from a function 
-    #to acces the individual values treat it as a list 
+
 
     hit_or_miss = ()
     percent = 100
@@ -299,7 +299,7 @@ def block_percentage_left(status, part, whole): #done
         rounded_percent = round(percent, 1) #usefull function that rounds to the nearest second digit specified in function
 
     elif status == False: 
-        #this fixes the issue that I hade earlier 
+   
         percent = (part/whole) * 100 
         rounded_percent = round(percent , 1)
         hit_or_miss = 'miss'
@@ -309,7 +309,7 @@ def block_percentage_left(status, part, whole): #done
     return rounded_percent, part, hit_or_miss
 
 
-def enemy_intel_map (enemy_intel_positions, game_board): #review pending
+def enemy_intel_map (enemy_intel_positions, game_board): #done
     '''the enemy_intel_positions are a list of all the ships position info 
         takes in positions 
             formats positions as a enemy board 
@@ -320,7 +320,7 @@ def enemy_intel_map (enemy_intel_positions, game_board): #review pending
     enemy_intel_board = create_empty_board() #creates empty board
 
     ship_positions = make_ship_positions(enemy_intel_positions) #converts positions from [A1] to [11]
-    #there might be issues with this
+   
 
     for row, column in ship_positions: 
         enemy_intel_board[row][column] = 'x' 
