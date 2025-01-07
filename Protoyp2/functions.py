@@ -159,7 +159,7 @@ def read_cheat_file(): #done
     file_number = random.randint(1,10)
 
   
-    file_name = rf'C:\Users\Perie\OneDrive\Documents\GitHub\Sink_the_ship-public-\ship_files\ship_file_no{file_number}.txt'
+    file_name = rf'ship_file_no{file_number}.txt'
 
 
     fleet_info = [] #all info of every ship is here!!
