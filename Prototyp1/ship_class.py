@@ -13,7 +13,7 @@ class Ship:
 
         file_number = 1 
 
-        file_name = rf'ship_file_no{file_number}.txt'
+        file_name = rf'C:\Users\Perie\OneDrive\Documents\GitHub\Sink_the_ship-public-\ship_files\ship_file_no{file_number}.txt'
 
 
         fleet_temp = [] 
