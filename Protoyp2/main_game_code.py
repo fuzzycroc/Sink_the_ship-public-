@@ -81,7 +81,10 @@ while main_game == True:
 
         if part == 0:
 
-            user_menu = 3 
+            print("Thank you for playing!!")
+            main_game = False
+            shooting_mode = False
+            reak  
 
         else: 
 
